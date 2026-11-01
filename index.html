@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Consultório de Psicologia · Terapia Cognitivo-Comportamental online</title>
+<meta name="description" content="Julia Netto Psicologia — Terapia Cognitivo-Comportamental online.">
+<meta property="og:title" content="Julia Netto Psicologia · TCC online">
+<meta property="og:description" content="Terapia Cognitivo-Comportamental online com Julia Netto.">
+<meta property="og:type" content="website">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18519293678"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18519293678');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+<link rel="stylesheet" href="./assets/fonts.css">
+<style>
+
+  :root{
+    --ink:#3B271B;
+    --teal-deep:#8A5033;
+    --teal-mid:#7A5A41;
+    --paper:#F4ECE1;
+    --card:#FBF6EF;
+    --gold:#7C93A0;
+    --gold-soft:#D8E0E3;
+    --rose:#A85D3B;
+    --line:#D8E2E5; --blue-pale:#E7EDEF; --blue-deep:#5C7481;
+    --white:#ffffff;
+    --shadow: 0 10px 30px rgba(58,38,25,0.10);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%; text-size-adjust:100%; scroll-padding-top:76px;}
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    letter-spacing:-0.01em;
+    color:var(--teal-deep);
+  }
+  em{font-style:italic; color:var(--gold); font-family:'Fraunces', serif; font-weight:500;}
+  a{color:inherit;}
+  .mono{font-family:'JetBrains Mono', monospace; letter-spacing:0.04em; text-transform:uppercase; font-size:0.72rem;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  section{padding:96px 0;}
+  img, svg{display:block; max-width:100%;}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(244,236,225,0.88);
+    -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1120px; margin:0 auto; padding:18px 32px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Fraunces', serif; font-weight:600; font-size:1.15rem; color:var(--teal-deep); white-space:nowrap;
+  }
+  .logo-mark{
+    width:36px; height:36px; object-fit:contain; flex-shrink:0;
+  }
+  .logo-mark-footer{}
+  nav.links{display:flex; gap:32px; font-size:0.92rem;}
+  nav.links a{text-decoration:none; color:var(--teal-mid); transition:color .2s;}
+  nav.links a:hover{color:var(--gold);}
+  .nav-cta{
+    background:var(--teal-deep); color:var(--white); padding:10px 20px; border-radius:100px;
+    text-decoration:none; font-size:0.88rem; font-weight:500; transition:background .2s;
+  }
+  .nav-cta:hover{background:var(--blue-deep);}
+  .burger{display:none; background:none; border:none; cursor:pointer; padding:10px;}
+  .burger span{display:block; width:22px; height:2px; background:var(--teal-deep); margin:5px 0; transition:.2s;}
+
+  /* ---------- QUOTE BAND ---------- */
+  .quote-band{background:var(--sand-bg, var(--card)); background:#EFE3D2; padding:56px 0; text-align:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .quote-band p{
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500; color:var(--teal-deep);
+    font-size:clamp(1.15rem,2.4vw,1.6rem); line-height:1.5; max-width:56ch; margin:0 auto 14px;
+  }
+  .quote-band .mono{color:var(--teal-mid);}
+
+  /* ---------- VIDEO HERO ---------- */
+  .video-hero{
+    position:relative; width:100%; aspect-ratio:16/7; max-height:560px; min-height:280px;
+    overflow:hidden; background:var(--teal-deep);
+  }
+  .video-hero video{
+    position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  }
+  .video-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(59,39,27,0.55) 0%, rgba(59,39,27,0.35) 45%, rgba(59,39,27,0.65) 100%);
+  }
+  .video-hero-text{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:18px; padding:0 32px; text-align:center;
+  }
+  .video-kicker{
+    font-family:'Fraunces', serif; font-weight:500; font-size:clamp(1.5rem,3.6vw,2.6rem); color:var(--white);
+    line-height:1.25; text-shadow:0 4px 24px rgba(0,0,0,0.35); max-width:24ch;
+  }
+  .video-kicker em{color:var(--gold-soft); font-style:italic;}
+  .video-sub{
+    color:var(--white); font-size:clamp(1rem,2vw,1.25rem); font-weight:400; line-height:1.5; max-width:46ch;
+    text-shadow:0 4px 20px rgba(0,0,0,0.35); opacity:0.94;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding-top:72px; padding-bottom:64px;}
+  .hero .wrap{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:64px; align-items:center;
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--teal-mid); margin-bottom:22px;
+  }
+  .eyebrow::before{content:""; width:26px; height:1px; background:var(--gold);}
+  h1.headline{
+    font-size:clamp(2rem, 1.4rem + 2.6vw, 3.4rem);
+    line-height:1.08;
+    margin-bottom:24px;
+  }
+  .sub{
+    font-size:1.08rem; color:var(--teal-mid); max-width:46ch; margin-bottom:34px;
+  }
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; margin-bottom:36px;}
+  .btn-primary{
+    background:var(--teal-deep); color:var(--white); padding:15px 28px; border-radius:100px;
+    text-decoration:none; font-weight:500; font-size:0.95rem; transition:transform .2s, background .2s;
+    display:inline-block; border:none; cursor:pointer;
+  }
+  .btn-primary:hover{background:var(--blue-deep); transform:translateY(-2px);}
+  .btn-secondary{
+    padding:15px 24px; border-radius:100px; border:1px solid var(--teal-mid); color:var(--teal-deep);
+    text-decoration:none; font-weight:500; font-size:0.95rem; transition:.2s; display:inline-block;
+  }
+  .btn-secondary:hover{border-color:var(--gold); color:var(--gold);}
+  .hero-meta{display:flex; gap:28px; flex-wrap:wrap;}
+  .hero-meta div{display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--teal-mid);}
+  .hero-meta svg{width:18px; height:18px; stroke:var(--gold); flex-shrink:0;}
+
+  /* photo frame - clean rounded style */
+  .photo-wrap{position:relative; display:flex; justify-content:center;}
+  .photo-frame-elegant{
+    position:relative; width:100%; max-width:340px;
+    border-radius:28px; overflow:hidden;
+    box-shadow:0 24px 50px -12px rgba(59,39,27,0.28), var(--shadow);
+  }
+  .photo-frame-elegant img{width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:center 22%; display:block;}
+  .photo-caption{margin-top:18px; text-align:center; color:var(--teal-mid); font-size:0.88rem;}
+  .photo-caption strong{display:block; color:var(--teal-deep); font-family:'Fraunces',serif; font-size:1.05rem; font-weight:500;}
+  .youtube-btn{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    margin:16px auto 0; width:fit-content; padding:10px 18px; border-radius:100px;
+    border:1px solid var(--line); color:var(--teal-mid); text-decoration:none; font-size:0.85rem;
+    transition:.15s; background:var(--paper);
+  }
+  .youtube-btn:hover{border-color:var(--gold); color:var(--teal-deep);}
+  .youtube-icon{width:18px; height:18px; color:#B5433A; flex-shrink:0; opacity:0.85;}
+
+  /* ---------- TIMEZONE BAND (signature) ---------- */
+  .tz-section{background:var(--teal-deep); color:var(--white);}
+  .tz-section .wrap{padding:0 32px;}
+  .tz-head{max-width:60ch; margin-bottom:56px;}
+  .tz-head .mono{color:var(--gold-soft);}
+  .tz-head h2{color:var(--white); font-size:clamp(1.6rem,3vw,2.2rem); margin-top:12px;}
+  .tz-head p{color:#E6DAC9; margin-top:14px; font-size:1rem;}
+
+  .tz-band{
+    position:relative; height:6px; border-radius:100px; margin:70px 0 0;
+    background:linear-gradient(90deg,
+      #3B271B 0%, #7A5A41 12%, #97A3AE 24%, #DCCCB4 36%, #F4ECE1 48%,
+      #F4ECE1 52%, #DCCCB4 64%, #97A3AE 76%, #7A5A41 88%, #3B271B 100%);
+  }
+  .tz-city{position:absolute; top:0; transform:translate(-50%,-50%); text-align:center;}
+  .tz-dot{width:12px; height:12px; border-radius:50%; background:var(--white); border:2px solid var(--gold); margin:0 auto;}
+  .tz-city .label{
+    position:absolute; left:50%; transform:translateX(-50%);
+    font-family:'JetBrains Mono',monospace; font-size:0.7rem; white-space:nowrap; color:#EFE6D9;
+  }
+  .tz-city.up .label{bottom:20px;}
+  .tz-city.down .label{top:20px;}
+  .tz-city .label small{display:block; color:#C7B79E; font-size:0.62rem; margin-top:2px;}
+  .tz-note{margin-top:110px; font-size:0.95rem; color:#E6DAC9; max-width:52ch;}
+
+  /* ---------- ABOUT ---------- */
+  .about{background:var(--card); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .about-wrap{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;}
+  .about-photo-col{display:flex; justify-content:center;}
+  .about-frame{max-width:520px;}
+  .about-frame img{aspect-ratio:4/3; object-position:center;}
+  .about-text .mono{color:var(--teal-mid); display:block; margin-bottom:12px;}
+  .about-text h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin-bottom:20px; line-height:1.25;}
+  .about-text p{color:var(--teal-mid); margin-bottom:16px; max-width:64ch; font-size:0.98rem;}
+  .about-highlight{
+    color:var(--teal-deep); font-family:'Fraunces', serif; font-size:1.08rem; font-weight:500;
+    border-left:3px solid var(--gold); padding-left:18px; margin-top:24px;
+  }
+
+  /* ---------- APPROACH ---------- */
+  .approach .wrap{display:grid; grid-template-columns:0.9fr 1.1fr; gap:64px;}
+  .approach .mono{color:var(--teal-mid); margin-bottom:14px; display:block;}
+  .approach h2{font-size:clamp(1.8rem,3vw,2.4rem); margin-bottom:8px;}
+  .approach-list{margin-top:32px; display:flex; flex-direction:column; gap:22px;}
+  .approach-item{display:flex; gap:16px; padding-bottom:22px; border-bottom:1px solid var(--line);}
+  .approach-item:last-child{border-bottom:none;}
+  .approach-item svg{width:22px; height:22px; stroke:var(--gold); flex-shrink:0; margin-top:3px;}
+  .approach-item h3{font-size:1.02rem; font-weight:500; margin-bottom:5px; font-family:'Inter'; color:var(--teal-deep);}
+  .approach-item p{font-size:0.92rem; color:var(--teal-mid);}
+  .approach-text p{color:var(--teal-mid); margin-bottom:16px; max-width:56ch;}
+
+  /* ---------- HOW IT WORKS / TIMELINE ---------- */
+  .how-section{background:var(--teal-deep); color:var(--white); overflow:hidden;}
+  .how-wrap{display:grid; grid-template-columns:0.85fr 1.15fr; gap:64px; align-items:start;}
+
+  .how-lead{
+    font-family:'Fraunces', serif; font-weight:600; font-size:clamp(1.5rem,2.4vw,1.9rem);
+    color:var(--white); line-height:1.32; max-width:26ch;
+  }
+  .how-lead em{color:var(--gold-soft); font-style:italic;}
+
+  .how-visual{position:relative; margin-top:58px; min-height:220px; display:flex; align-items:center; justify-content:center;}
+  .how-rings{position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:280px; height:280px; stroke:rgba(151,163,174,0.45); z-index:0;}
+  .how-overlay{
+    position:relative; z-index:2;
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500;
+    font-size:clamp(2.4rem,4.4vw,3.4rem); line-height:0.92; color:var(--white); text-align:center;
+    text-shadow:0 6px 24px rgba(0,0,0,0.35);
+  }
+  .how-overlay span{display:block;}
+  .how-overlay span:last-child{color:var(--gold-soft);}
+
+  .timeline{list-style:none; position:relative; padding-left:34px;}
+  .timeline::before{
+    content:""; position:absolute; left:5px; top:8px; bottom:8px; width:1px;
+    background:rgba(255,255,255,0.22);
+  }
+  .timeline-item{position:relative; padding-bottom:44px;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-dot{
+    position:absolute; left:-34px; top:6px; width:11px; height:11px; border-radius:50%;
+    background:var(--white); border:2px solid var(--gold);
+  }
+  .timeline-step{
+    color:var(--gold-soft); display:block; margin-bottom:6px;
+    font-family:'Fraunces', serif; font-style:italic; font-weight:500; font-size:1.05rem;
+    text-transform:none; letter-spacing:normal;
+  }
+  .timeline-item h3{
+    color:var(--white); font-family:'Inter', sans-serif; font-weight:600; font-size:1.3rem; margin-bottom:10px;
+    text-transform:uppercase; letter-spacing:0.02em;
+  }
+  .timeline-item p{color:#E6DAC9; font-size:0.94rem; max-width:56ch;}
+
+  /* ---------- TOPICS / CHIPS ---------- */
+  .topics{background:var(--blue-pale); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .topics-head{max-width:62ch; margin-bottom:40px;}
+  .topics-head .mono{color:var(--teal-mid); display:block; margin-bottom:12px;}
+  .topics-head h2{font-size:clamp(1.7rem,3vw,2.3rem);}
+  .topics-head p{color:var(--teal-mid); margin-top:14px;}
+  .chips{display:flex; flex-wrap:wrap; gap:12px;}
+  .chip{
+    padding:12px 20px; border-radius:100px; border:1px solid var(--line); background:var(--paper);
+    font-size:0.9rem; color:var(--teal-deep); cursor:default; user-select:none;
+  }
+  .topics-foot{margin-top:32px; padding-top:20px; border-top:1px dashed var(--line); font-size:0.95rem; color:var(--teal-mid); max-width:62ch;}
+
+  /* ---------- SCHEDULE / CONTACT ---------- */
+  .schedule .wrap{display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:start;}
+  .schedule .wrap > div{min-width:0;}
+  .panel-head .mono{color:var(--teal-mid); display:block; margin-bottom:10px;}
+  .door-icon{width:38px; height:46px; stroke:var(--gold); color:var(--gold); margin-bottom:14px;}
+  .panel-head h2{font-size:clamp(1.6rem,2.8vw,2.1rem); margin-bottom:10px;}
+  .panel-head p{color:var(--teal-mid); font-size:0.94rem; margin-bottom:24px;}
+  .invest-note{
+    background:var(--blue-pale); border:1px solid var(--line); border-radius:16px; padding:18px 20px; margin-top:-6px; margin-bottom:24px;
+  }
+  .invest-note h3{font-size:0.95rem; font-family:'Inter'; font-weight:600; color:var(--teal-deep); margin-bottom:6px;}
+  .invest-note p{color:var(--teal-mid); font-size:0.85rem; margin-bottom:0; line-height:1.5;}
+
+  .days-card, .contact-card{
+    background:var(--card); border:1px solid var(--line); border-radius:20px; padding:28px;
+    box-shadow:var(--shadow);
+  }
+  .days{display:flex; flex-wrap:wrap; gap:10px;}
+  .day{
+    padding:12px 20px; border-radius:100px; background:var(--gold); color:var(--white);
+    font-family:'JetBrains Mono', monospace; font-size:0.85rem; letter-spacing:0.04em; text-transform:uppercase;
+  }
+  .btn-whatsapp{
+    display:flex; align-items:center; justify-content:center; gap:10px; width:100%; text-align:center;
+  }
+  .btn-whatsapp svg{width:20px; height:20px; stroke:currentColor; flex-shrink:0;}
+  .contact-note{font-size:0.8rem; color:var(--teal-mid); margin-top:14px; text-align:center;}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--teal-deep); color:#E6DAC9; padding:64px 0 0;}
+  .footer-grid{
+    display:grid; grid-template-columns:1.2fr 0.9fr 1.5fr 1fr; gap:40px; padding-bottom:44px;
+    border-bottom:1px solid rgba(255,255,255,0.15);
+  }
+  .footer-col{display:flex; flex-direction:column; gap:10px; min-width:0;}
+  .footer-col .mono{color:var(--gold-soft); margin-bottom:4px;}
+  .footer-col a{overflow-wrap:anywhere; color:#E6DAC9; text-decoration:none; font-size:0.9rem; transition:.15s;}
+  .footer-col a:hover{color:var(--gold-soft);}
+  .footer-col p{font-size:0.85rem; color:#C9B79C;}
+  .footer-social{display:flex; align-items:center; gap:8px; margin-top:4px;}
+  .footer-social svg{width:18px; height:18px; flex-shrink:0;}
+  .footer-brand .logo{color:var(--white); margin-bottom:6px;}
+  .footer-bottom{padding:22px 0; text-align:center;}
+  .footer-bottom p{font-size:0.78rem; color:#C9B79C;}
+
+
+  /* ====================================================
+     RESPONSIVIDADE
+     Computador: acima de 1100px | Tablet: 641px a 1100px | Celular: até 640px
+     ==================================================== */
+
+  @media (max-width:1100px){
+    .nav-inner{padding:14px 28px; flex-wrap:nowrap; gap:12px;}
+    nav.links{
+      display:none; position:absolute; top:100%; left:0; right:0;
+      flex-direction:column; gap:0; background:var(--paper); border-bottom:1px solid var(--line);
+      box-shadow:var(--shadow); padding:8px 0;
+    }
+    nav.links.open{display:flex;}
+    nav.links a{padding:15px 28px; border-bottom:1px solid var(--line); font-size:1rem;}
+    nav.links a:last-child{border-bottom:none;}
+    .burger{display:block; order:3; flex-shrink:0;}
+    .nav-cta{order:2; margin-left:auto; flex-shrink:0;}
+  }
+
+  @media (max-width:1024px){
+    section{padding:80px 0;}
+    .wrap{padding:0 28px;}
+    .hero{padding-top:56px; padding-bottom:56px;}
+    .hero .wrap, .about-wrap, .approach .wrap, .how-wrap{gap:40px;}
+    .footer-grid{grid-template-columns:1fr 1fr; gap:32px;}
+    .schedule .wrap{grid-template-columns:1fr; gap:48px;}
+    .schedule .wrap > div{width:100%; max-width:620px; margin-left:auto; margin-right:auto;}
+  }
+
+  @media (max-width:860px){
+    .hero .wrap, .approach .wrap, .about-wrap, .how-wrap{grid-template-columns:1fr;}
+    .photo-wrap, .about-photo-col{order:-1;}
+    .photo-frame-elegant{max-width:380px;}
+    .about-frame{max-width:560px; width:100%;}
+    .video-hero{aspect-ratio:16/8; min-height:300px;}
+    .tz-band{margin-top:60px;}
+    .tz-note{margin-top:84px;}
+  }
+
+  @media (max-width:640px){
+    section{padding:56px 0;}
+    .wrap{padding:0 20px;}
+    .nav-inner{padding:12px 20px;}
+    nav.links a{padding:15px 20px;}
+    .logo-mark{width:32px; height:32px;}
+    .nav-cta{font-size:0.8rem; padding:9px 16px;}
+
+    .hero{padding-top:36px; padding-bottom:44px;}
+    .hero .wrap{gap:28px;}
+    .eyebrow{margin-bottom:16px;}
+    .sub{font-size:1rem; margin-bottom:26px;}
+    .hero-ctas{flex-direction:column; align-items:stretch; gap:12px;}
+    .hero-ctas a{text-align:center;}
+    .hero-meta{flex-direction:column; gap:10px; align-items:flex-start;}
+    .photo-frame-elegant{max-width:300px;}
+    .about-frame{max-width:100%;}
+
+    .video-hero{aspect-ratio:4/5; max-height:440px; min-height:300px;}
+    .video-hero-text{padding:0 20px;}
+    .video-kicker{font-size:1.35rem;}
+
+    /* faixa de fusos vira vertical no celular */
+    .tz-head{margin-bottom:36px;}
+    .tz-band{
+      height:auto; width:6px; margin:8px 0 0 8px; display:flex; flex-direction:column; align-items:flex-start; gap:34px;
+      background:linear-gradient(180deg,#3B271B 0%,#7A5A41 12%,#97A3AE 24%,#DCCCB4 36%,#F4ECE1 48%,#F4ECE1 52%,#DCCCB4 64%,#97A3AE 76%,#7A5A41 88%,#3B271B 100%);
+    }
+    .tz-city{
+      position:relative; left:auto !important; top:auto; transform:none;
+      display:flex; align-items:center; gap:16px; margin-left:-3px; text-align:left;
+    }
+    .tz-city .tz-dot{order:1; margin:0; flex-shrink:0;}
+    .tz-city .label{
+      order:2; position:static !important; transform:none; top:auto !important; bottom:auto !important; left:auto;
+      font-size:0.74rem;
+    }
+    .tz-city .label small{font-size:0.66rem;}
+    .tz-note{margin-top:36px;}
+
+    .how-lead{max-width:none;}
+    .timeline{padding-left:28px; margin-top:28px;}
+    .timeline-item h3{font-size:1.15rem;}
+
+    .topics-head{margin-bottom:28px;}
+    .chips{gap:10px;}
+    .chip{font-size:0.85rem; padding:10px 15px;}
+
+    .days-card, .contact-card{padding:22px 18px;}
+    .day{padding:10px 16px;}
+    .invest-note{margin-top:0;}
+  }
+
+  @media (max-width:560px){
+    .footer-grid{grid-template-columns:1fr; gap:26px;}
+  }
+  @media (max-width:480px){
+    .logo-sub{display:none;}
+  }
+  @media (max-width:380px){
+    .nav-cta{font-size:0.72rem; padding:8px 11px;}
+  }
+  @media (max-width:340px){
+    .nav-cta{display:none;}
+  }
+
+  /* WhatsApp CTA por seção */
+  .wa-cta{margin-top:40px; display:flex; grid-column:1/-1;}
+  .hero .wa-cta{margin-top:0;}
+  .tz-section .wa-cta .btn-primary, .how-section .wa-cta .btn-primary{background:var(--white); color:var(--teal-deep);}
+  .tz-section .wa-cta .btn-primary:hover, .how-section .wa-cta .btn-primary:hover{background:var(--gold-soft); color:var(--ink);}
+
+  /* Lista de dores */
+  .pain-list{list-style:none; columns:3 220px; column-gap:40px; margin-top:8px;}
+  .pain-list li{break-inside:avoid; position:relative; padding:9px 0 9px 22px; border-bottom:1px solid var(--line); color:var(--teal-mid); font-size:0.97rem;}
+  .pain-list li::before{content:""; position:absolute; left:2px; top:50%; width:7px; height:7px; border-radius:50%; background:var(--gold); transform:translateY(-50%);}
+  .wa-cta .btn-whatsapp{width:auto;}
+
+/* Reviews */
+.reviews{padding:96px 0}
+.review-carousel{overflow:hidden;margin-top:40px;--gap:24px;--per:3;-webkit-mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent);mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}
+.review-track{display:flex;gap:var(--gap);width:max-content;animation:review-scroll 60s linear infinite}
+.review-carousel:hover .review-track{animation-play-state:paused}
+@keyframes review-scroll{to{transform:translateX(calc(-50% - var(--gap)/2))}}
+@media (max-width:1000px){.review-carousel{--per:2}}
+@media (max-width:640px){.review-carousel{--per:1}}
+@media (prefers-reduced-motion:reduce){.review-track{animation-duration:180s}}
+.review-card{flex:0 0 calc((min(1056px,100vw - 64px) - var(--gap)*(var(--per) - 1))/var(--per));display:flex;flex-direction:column;margin:0;padding:28px;border:1px solid rgba(0,0,0,.08);border-radius:16px;background:rgba(255,255,255,.6)}
+.review-stars{color:#c9a227;letter-spacing:3px;font-size:18px;margin-bottom:14px}
+.review-card blockquote{margin:0 0 18px;line-height:1.6}
+.review-card figcaption{margin-top:auto;display:flex;justify-content:space-between;gap:12px;font-size:14px;opacity:.85}
+
+</style>
+</head>
+<body>
+
+
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <img src="./assets/a1.webp" alt="JN" class="logo-mark" width="96" height="96" decoding="async">
+      <span>Julia Netto<span class="logo-sub"> · Psicologia</span></span>
+    </div>
+    <nav class="links">
+      <a href="#sobre">Sobre mim</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#pontos">O que trabalhar</a>
+      <a href="#avaliacoes">Avaliações</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a href="#contato" class="nav-cta">Marcar horário</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow mono">Terapia Cognitivo-Comportamental · Online</div>
+        <h1 class="headline">Um espaço acolhedor para você se <em>entender</em>, esteja onde estiver.</h1>
+        <p class="sub">Atendimento psicológico em português para brasileiros no Brasil e no exterior, com base na TCC, uma abordagem prática, estruturada e feita para caber na sua rotina, em qualquer fuso horário.</p>
+        <div class="hero-ctas">
+          <a href="#contato" class="btn-primary">Marcar uma conversa inicial</a>
+          <a href="#abordagem" class="btn-secondary">Conhecer a abordagem</a>
+        </div>
+        <div class="hero-meta">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"></path></svg>100% online</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Horários combinados com seu fuso</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>Atendimento em português</div>
+        </div>
+      </div>
+
+      <div class="photo-wrap">
+        <div>
+          <div class="photo-frame-elegant">
+            <img src="./assets/a2.webp" alt="Julia Netto, psicóloga" width="680" height="906" loading="eager" fetchpriority="high" decoding="async">
+          </div>
+          <div class="photo-caption">
+            <strong>Julia Netto</strong>
+            Psicóloga · Formada em 2013<br>
+            Especializanda em Neuropsicologia pelo Albert Einstein
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+
+  <!-- VIDEO HERO -->
+  <section class="video-hero">
+    <video muted="" loop="" playsinline="" webkit-playsinline="true" preload="none" data-src="./assets/background-optimized.mp4" poster="./assets/video-poster.webp">
+    </video>
+    <div class="video-overlay"></div>
+    <div class="video-hero-text">
+      <div class="video-kicker">Às vezes, tudo o que precisamos é de um <em>lugar seguro</em> para começar.</div>
+    </div>
+  </section>
+
+  <!-- TIMEZONE SIGNATURE SECTION -->
+  <section class="tz-section" id="fusos">
+    <div class="wrap">
+      <div class="tz-head">
+        <span class="mono">Onde você estiver</span>
+        <h2>Não importa o fuso horário: a gente encontra um horário que funcione para você.</h2>
+        <p>Atendo brasileiros espalhados pelo mundo: quem mora fora, quem viaja a trabalho, quem simplesmente prefere terapia à noite ou de madrugada. Os horários das sessões se ajustam à sua rotina, não o contrário.</p>
+      </div>
+
+      <div class="tz-band" id="tzBand">
+        <div class="tz-city up" style="left:8%">
+          <div class="label" style="bottom:20px">São Paulo<small>Horário de Brasília</small></div>
+          <div class="tz-dot"></div>
+        </div>
+        <div class="tz-city down" style="left:26%">
+          <div class="tz-dot"></div>
+          <div class="label" style="top:20px">Lisboa<small>WET / CET</small></div>
+        </div>
+        <div class="tz-city up" style="left:44%">
+          <div class="label" style="bottom:20px">Londres<small>GMT / BST</small></div>
+          <div class="tz-dot"></div>
+        </div>
+        <div class="tz-city down" style="left:58%">
+          <div class="tz-dot"></div>
+          <div class="label" style="top:20px">Toronto<small>EST / EDT</small></div>
+        </div>
+        <div class="tz-city up" style="left:76%">
+          <div class="label" style="bottom:20px">Tóquio<small>JST</small></div>
+          <div class="tz-dot"></div>
+        </div>
+        <div class="tz-city down" style="left:93%">
+          <div class="tz-dot"></div>
+          <div class="label" style="top:20px">Sydney<small>AEST</small></div>
+        </div>
+      </div>
+
+      <p class="tz-note">Não encontrou sua cidade na faixa acima? Sem problema. É só me chamar no WhatsApp e informar seu fuso e suas datas disponíveis. O horário é combinado direto com você.</p>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- SOBRE MIM -->
+  <section class="about" id="sobre">
+    <div class="wrap about-wrap">
+      <div class="about-photo-col">
+        <div class="photo-frame-elegant about-frame">
+          <img src="./assets/a4.webp" alt="Consultório acolhedor, com estantes, plantas e mesa de trabalho" width="1000" height="750" loading="lazy" decoding="async">
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="mono">Sobre mim</span>
+        <h2>Minha escolha pela Psicologia veio de uma <em>experiência pessoal</em></h2>
+        <p>Na juventude, a ansiedade dificultava a forma como eu lidava com minhas emoções. Foi na terapia que encontrei acolhimento, aprendi a me regular emocionalmente, desenvolvi autoconhecimento e ganhei mais segurança.</p>
+        <p>Nesse processo, percebi que a terapia gera mudanças reais no comportamento e nas relações. Foi ali que me apaixonei pela Psicologia e tive a certeza de que todas as pessoas podem mudar e evoluir quando encontram escuta e direcionamento certo.</p>
+        <p>Quando entrei na faculdade de Psicologia, entendi que poderia ajudar outras pessoas por meio da escuta atenta e de intervenções adequadas, construindo com elas uma relação mais consciente e saudável consigo mesmas.</p>
+        <p class="about-highlight">Levo essa vivência para a minha prática clínica: crio um espaço seguro, onde você pode falar no seu tempo, compreender suas emoções e aprender novas formas de lidar com os desafios do dia a dia.</p>
+      </div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- ABORDAGEM -->
+  <section class="approach" id="abordagem">
+    <div class="wrap">
+      <div class="approach-text">
+        <span class="mono">A abordagem</span>
+        <h2>Terapia Cognitivo-Comportamental (TCC)</h2>
+        <p>Se você nunca fez terapia ou não conhece a Terapia Cognitivo-Comportamental (TCC), pode pensar nela como um espaço para entender por que você sente, pensa e reage da forma que <em>reage</em>.</p>
+        <p>Ao longo da vida, todos nós desenvolvemos maneiras de interpretar as situações e de lidar com elas. Algumas nos ajudam. Outras, sem que a gente perceba, acabam alimentando a ansiedade, a culpa, a insegurança, os conflitos nos relacionamentos ou o sofrimento emocional.</p>
+        <p>Na terapia, vamos compreender esses padrões juntos. Meu papel não é dizer o que você deve fazer, mas ajudá-lo a enxergar sua história com mais clareza, entender o que mantém esse sofrimento e construir formas mais saudáveis de lidar com os desafios do dia a dia.</p>
+      </div>
+      <div class="approach-list">
+        <div class="approach-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <div><h3>Objetivos claros</h3><p>Cada processo tem metas definidas junto com você, revisadas ao longo do caminho.</p></div>
+        </div>
+        <div class="approach-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <div><h3>Ferramentas práticas</h3><p>Técnicas e exercícios que você leva para o dia a dia, entre uma sessão e outra.</p></div>
+        </div>
+        <div class="approach-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+          <div><h3>Foco no presente</h3><p>Trabalha o que está afetando sua vida agora, sem deixar de considerar sua história.</p></div>
+        </div>
+        <div class="approach-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"></path></svg>
+          <div><h3>Sessões online</h3><p>Atendimento por videochamada, com a mesma qualidade e sigilo de um consultório presencial.</p></div>
+        </div>
+      </div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section class="how-section" id="processo">
+    <div class="wrap how-wrap">
+      <div class="how-intro">
+        <p class="how-lead">Do primeiro contato até você se sentir <em>à vontade</em> comigo, cada etapa pensada com cuidado.</p>
+      </div>
+
+      <ol class="timeline">
+        <li class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="mono timeline-step">Passo 01</span>
+          <h3>Primeiro contato</h3>
+          <p>Você me chama e eu te conto um pouco de como são os meus atendimentos: um trabalho de escuta, respeito e acolhimento, num espaço seguro e sem julgamentos, onde você fala tudo que precisar, no seu tempo.</p>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="mono timeline-step">Passo 02</span>
+          <h3>A abordagem</h3>
+          <p>Uso a TCC, uma abordagem prática e objetiva, que ajuda a entender como pensamentos, emoções e comportamentos estão conectados, e como pequenas mudanças nesse processo geram as transformações que você precisa.</p>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="mono timeline-step">Passo 03</span>
+          <h3>O processo</h3>
+          <p>A terapia acontece através da sua fala e da sua disponibilidade para se ouvir e se compreender. Ao longo das sessões, observamos seus padrões, compreendemos suas reações e desenvolvemos estratégias para mais clareza emocional, equilíbrio e segurança.</p>
+        </li>
+        <li class="timeline-item">
+          <span class="timeline-dot"></span>
+          <span class="mono timeline-step">Passo 04</span>
+          <h3>Suas próprias respostas</h3>
+          <p>A terapia não entrega respostas prontas. É um caminho para você construir as suas, com mais consciência e segurança. Se sentir que é hora de começar ou continuar esse processo, fica aqui o meu convite para conversarmos.</p>
+        </li>
+      </ol>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- TOPICS -->
+  <section class="topics" id="pontos">
+    <div class="wrap">
+      <div class="topics-head">
+        <span class="mono">Antes da primeira sessão</span>
+        <h2>O que você gostaria de trabalhar?</h2>
+        <p>Estes são alguns dos motivos pelos quais as pessoas procuram terapia. Se você se identificar com algum deles, ou com algo parecido, esse pode ser um bom ponto de partida para a nossa conversa.</p>
+      </div>
+      <ul class="pain-list">
+        <li>Ansiedade</li>
+        <li>Autoestima</li>
+        <li>Relacionamentos</li>
+        <li>Depressão</li>
+        <li>Estresse e rotina</li>
+        <li>Autoconhecimento</li>
+        <li>Regulação emocional</li>
+        <li>Ataque de pânico</li>
+        <li>Insegurança</li>
+        <li>Perfeccionismo</li>
+        <li>Culpa</li>
+        <li>Solidão</li>
+        <li>Timidez e fobia social</li>
+        <li>Pensamentos repetitivos</li>
+        <li>TOC</li>
+        <li>Cansaço emocional e burnout</li>
+        <li>Dificuldade em dizer não</li>
+        <li>Controle da raiva</li>
+        <li>Dependência emocional</li>
+        <li>Término de relacionamento</li>
+        <li>Divórcio</li>
+        <li>Dificuldades na comunicação</li>
+        <li>Luto</li>
+        <li>Mudanças de vida</li>
+        <li>Crise de identidade</li>
+        <li>Carreira</li>
+        <li>Procrastinação</li>
+        <li>Sono</li>
+        <li>Adaptação a morar fora do Brasil</li>
+        <li>Saudade e distância da família</li>
+        <li>Maternidade e puerpério</li>
+        <li>Depressão pós-parto</li>
+        <li>Infertilidade</li>
+        <li>TDAH</li>
+        <li>Autismo</li>
+        <li>Borderline</li>
+        <li>Bipolaridade</li>
+        <li>Fobias</li>
+        <li>Traumas e abusos</li>
+        <li>Transtornos alimentares</li>
+        <li>Perda de peso</li>
+        <li>Dores crônicas</li>
+        <li>Intimidade</li>
+        <li>Sexualidade</li>
+        <li>Desenvolvimento pessoal</li>
+        <li>Outros</li>
+      </ul>
+      <p class="topics-foot">Não encontrou o seu motivo na lista? Tudo bem. Cada história é única, e você pode me contar o que te trouxe até aqui.</p>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES -->
+  <section class="reviews" id="avaliacoes">
+    <div class="wrap">
+      <div class="topics-head">
+        <span class="mono">Avaliações</span>
+        <h2>O que dizem sobre as sessões</h2>
+      </div>
+      <div class="review-carousel">
+        <div class="review-track">
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Adorei a nossa primeira sessão. Eu me senti segura e creio que a Júlia irá me ajudar bastante.</blockquote><figcaption><strong>Amanda</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>A Júlia é uma especialista extremamente acolhedora, que sabe conduzir reflexões importantes e incentivar você a sair da zona de conforto para enxergar novas possibilidades. Ótima profissional, eu super recomendo.</blockquote><figcaption><strong>Chaiane</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Julia é atenciosa e empática. Sem dúvida, uma profissional excelente e uma voz necessária a todos que precisam de acolhimento, reflexão, entendimento ou perspectiva.</blockquote><figcaption><strong>Ana</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Encontrei o que eu buscava nas terapias: compreensão clara e precisa do meu comportamento e como é minha reação. Visualizar isso me trouxe mais paz por causa da Júlia. Gratidão 🙏🏽</blockquote><figcaption><strong>Mariane</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Muito atenciosa!</blockquote><figcaption><strong>Isabella</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>A sessão com a Júlia é ótima, ela é uma profissional incrível e tem um cuidado incrível! Super indico.</blockquote><figcaption><strong>Franciele</strong></figcaption></figure>
+        <figure class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Julia é uma profissional incrível! Escuta com atenção, dialoga e nos faz pensar e refletir a todo momento, fazendo provocações e orientações. Todos deveriam ter a oportunidade dessas trocas com ela!</blockquote><figcaption><strong>Vitória</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Adorei a nossa primeira sessão. Eu me senti segura e creio que a Júlia irá me ajudar bastante.</blockquote><figcaption><strong>Amanda</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>A Júlia é uma especialista extremamente acolhedora, que sabe conduzir reflexões importantes e incentivar você a sair da zona de conforto para enxergar novas possibilidades. Ótima profissional, eu super recomendo.</blockquote><figcaption><strong>Chaiane</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Julia é atenciosa e empática. Sem dúvida, uma profissional excelente e uma voz necessária a todos que precisam de acolhimento, reflexão, entendimento ou perspectiva.</blockquote><figcaption><strong>Ana</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Encontrei o que eu buscava nas terapias: compreensão clara e precisa do meu comportamento e como é minha reação. Visualizar isso me trouxe mais paz por causa da Júlia. Gratidão 🙏🏽</blockquote><figcaption><strong>Mariane</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Muito atenciosa!</blockquote><figcaption><strong>Isabella</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>A sessão com a Júlia é ótima, ela é uma profissional incrível e tem um cuidado incrível! Super indico.</blockquote><figcaption><strong>Franciele</strong></figcaption></figure>
+        <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Julia é uma profissional incrível! Escuta com atenção, dialoga e nos faz pensar e refletir a todo momento, fazendo provocações e orientações. Todos deveriam ter a oportunidade dessas trocas com ela!</blockquote><figcaption><strong>Vitória</strong></figcaption></figure>
+        </div>
+      </div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    </div>
+  </section>
+
+  <!-- ATENDIMENTO + CONTATO -->
+  <section class="schedule" id="agenda">
+    <div class="wrap">
+      <div>
+        <div class="panel-head">
+          <span class="mono">Sua disponibilidade</span>
+          <h2>Atendo de segunda a sexta</h2>
+          <p>Os horários são combinados diretamente com você, de acordo com a sua rotina e o seu fuso horário.</p>
+        </div>
+        <div class="days-card">
+          <div class="days">
+            <span class="day">Seg</span><span class="day">Ter</span><span class="day">Qua</span><span class="day">Qui</span><span class="day">Sex</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="contato">
+        <div class="panel-head">
+          <svg class="door-icon" viewBox="0 0 60 72" fill="none">
+            <path d="M4 70V30C4 14 15 4 30 4s26 10 26 26v40" stroke-width="3"></path>
+            <line x1="30" y1="6" x2="30" y2="70" stroke-width="2"></line>
+            <circle cx="24" cy="40" r="1.6" fill="currentColor" stroke="none"></circle>
+            <circle cx="36" cy="40" r="1.6" fill="currentColor" stroke="none"></circle>
+          </svg>
+          <span class="mono">Contato</span>
+          <h2>Vamos conversar</h2>
+          <p>Clique no botão abaixo para falar diretamente comigo no WhatsApp.</p>
+          <div class="invest-note">
+            <h3>Agendamento e investimento</h3>
+            <p>Antes de iniciar a terapia, conversaremos sobre o funcionamento do atendimento, frequência das sessões, honorários e formas de pagamento.</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+            Falar no WhatsApp
+          </a>
+          <p class="contact-note">Você será direcionado para o WhatsApp.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div class="footer-col footer-brand">
+      <div class="logo"><img src="./assets/a5.webp" alt="JN" class="logo-mark logo-mark-footer" width="96" height="94" loading="lazy" decoding="async">Julia Netto · Psicologia</div>
+      <p>Atendimento online para brasileiros no Brasil e no exterior.</p>
+    </div>
+    <div class="footer-col">
+      <span class="mono">Navegação</span>
+      <a href="#sobre">Sobre mim</a>
+      <a href="#abordagem">Abordagem</a>
+      <a href="#processo">Como funciona</a>
+      <a href="#pontos">O que trabalhar</a>
+      <a href="#avaliacoes">Avaliações</a>
+    </div>
+    <div class="footer-col">
+      <span class="mono">Contato</span>
+      <a href="https://wa.me/5511997927022" target="_blank" rel="noopener">11 99792-7022 · WhatsApp</a>
+    </div>
+    <div class="footer-col">
+      <span class="mono">Julia Netto</span>
+      <p>Psicóloga · CRP 06/212196</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <p>© Julia Netto Psicologia. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+  var navLinks = document.querySelector('nav.links');
+  var burger = document.querySelector('.burger');
+  if (navLinks && burger) {
+    var setMenu = function (open) {
+      navLinks.classList.toggle('open', open);
+      burger.setAttribute('aria-expanded', String(open));
+    };
+    burger.addEventListener('click', function () { setMenu(!navLinks.classList.contains('open')); });
+    document.querySelectorAll('nav.links a, .nav-cta').forEach(function (a) {
+      a.addEventListener('click', function () { setMenu(false); });
+    });
+    var desktop = window.matchMedia('(min-width: 1101px)');
+    desktop.addEventListener('change', function () { if (desktop.matches) setMenu(false); });
+  }
+  var video = document.querySelector('.video-hero video');
+  if (video) {
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    var visible = false;
+    var syncPlayback = function () {
+      if (!visible || document.hidden || reducedMotion.matches) { video.pause(); return; }
+      if (!video.getAttribute('src') && video.dataset.src) {
+        video.src = video.canPlayType('video/webm; codecs="vp9"') ? video.dataset.webm || video.dataset.src : video.dataset.src;
+        video.load();
+      }
+      video.play().catch(function () {});
+    };
+    var observer = new IntersectionObserver(function (entries) {
+      visible = entries.some(function (e) { return e.isIntersecting; });
+      syncPlayback();
+    });
+    observer.observe(video);
+    document.addEventListener('visibilitychange', syncPlayback);
+    reducedMotion.addEventListener('change', syncPlayback);
+  }
+});
+
+</script>
+
+
+</body></html>
