@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Consultório de Psicologia · Terapia Cognitivo-Comportamental online</title>
 <meta name="description" content="Julia Netto Psicologia — Terapia Cognitivo-Comportamental online.">
@@ -8,16 +9,16 @@
 <meta property="og:description" content="Terapia Cognitivo-Comportamental online com Julia Netto.">
 <meta property="og:type" content="website">
 <!-- Google tag (gtag.js) -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=AW-18519293678"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18519293678"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-18519293678');
 </script>
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
-<link rel="stylesheet" href="./assets/fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
 <style>
 
   :root{
@@ -156,7 +157,7 @@
   /* photo frame - clean rounded style */
   .photo-wrap{position:relative; display:flex; justify-content:center;}
   .photo-frame-elegant{
-    position:relative; width:100%; max-width:340px; margin-inline:auto;
+    position:relative; width:100%; max-width:340px;
     border-radius:28px; overflow:hidden;
     box-shadow:0 24px 50px -12px rgba(59,39,27,0.28), var(--shadow);
   }
@@ -379,7 +380,8 @@
     .hero-ctas{flex-direction:column; align-items:stretch; gap:12px;}
     .hero-ctas a{text-align:center;}
     .hero-meta{flex-direction:column; gap:10px; align-items:flex-start;}
-    .photo-frame-elegant{max-width:300px;}
+    .photo-wrap > div{width:100%; display:flex; flex-direction:column; align-items:center;}
+    .photo-frame-elegant{max-width:300px; margin-left:auto; margin-right:auto;}
     .about-frame{max-width:100%;}
 
     .video-hero{aspect-ratio:4/5; max-height:440px; min-height:300px;}
@@ -389,7 +391,7 @@
     /* faixa de fusos vira vertical no celular */
     .tz-head{margin-bottom:36px;}
     .tz-band{
-      height:auto; width:6px; margin:8px 0 0 8px; display:flex; flex-direction:column; align-items:flex-start; gap:34px;
+      height:auto; width:6px; margin:8px 0 0 8px; display:flex; flex-direction:column; align-items:flex-start; gap:16px;
       background:linear-gradient(180deg,#3B271B 0%,#7A5A41 12%,#97A3AE 24%,#DCCCB4 36%,#F4ECE1 48%,#F4ECE1 52%,#DCCCB4 64%,#97A3AE 76%,#7A5A41 88%,#3B271B 100%);
     }
     .tz-city{
@@ -413,7 +415,10 @@
     .chip{font-size:0.85rem; padding:10px 15px;}
 
     .days-card, .contact-card{padding:22px 18px;}
-    .day{padding:10px 16px;}
+    .days{flex-wrap:nowrap; gap:6px; justify-content:space-between;}
+    .day{flex:1 1 0; min-width:0; text-align:center; padding:10px 0; font-size:0.72rem; letter-spacing:0.02em;}
+    .pain-list:not(.expanded) li:nth-child(n+7){display:none;}
+    .more-topics{display:block;}
     .invest-note{margin-top:0;}
   }
 
@@ -437,6 +442,7 @@
   .tz-section .wa-cta .btn-primary:hover, .how-section .wa-cta .btn-primary:hover{background:var(--gold-soft); color:var(--ink);}
 
   /* Lista de dores */
+  .more-topics{display:none; margin:22px auto 0; padding:12px 26px; border-radius:100px; border:1px solid var(--gold); background:transparent; color:var(--teal-deep); font-family:'JetBrains Mono', monospace; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase; cursor:pointer;}
   .pain-list{list-style:none; columns:3 220px; column-gap:40px; margin-top:8px;}
   .pain-list li{break-inside:avoid; position:relative; padding:9px 0 9px 22px; border-bottom:1px solid var(--line); color:var(--teal-mid); font-size:0.97rem;}
   .pain-list li::before{content:""; position:absolute; left:2px; top:50%; width:7px; height:7px; border-radius:50%; background:var(--gold); transform:translateY(-50%);}
@@ -496,9 +502,9 @@
           <a href="#abordagem" class="btn-secondary">Conhecer a abordagem</a>
         </div>
         <div class="hero-meta">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"></path></svg>100% online</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>Horários combinados com seu fuso</div>
-          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>Atendimento em português</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"/></svg>100% online</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>Horários combinados com seu fuso</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M4 6h16M4 12h16M4 18h16"/></svg>Atendimento em português</div>
         </div>
       </div>
 
@@ -520,7 +526,7 @@
 
   <!-- VIDEO HERO -->
   <section class="video-hero">
-    <video muted="" loop="" playsinline="" webkit-playsinline="true" preload="none" data-src="./assets/background-optimized.mp4" poster="./assets/video-poster.webp">
+    <video muted loop playsinline webkit-playsinline="true" preload="none" data-src="./assets/background-optimized.mp4" poster="./assets/video-poster.webp">
     </video>
     <div class="video-overlay"></div>
     <div class="video-hero-text">
@@ -565,7 +571,7 @@
       </div>
 
       <p class="tz-note">Não encontrou sua cidade na faixa acima? Sem problema. É só me chamar no WhatsApp e informar seu fuso e suas datas disponíveis. O horário é combinado direto com você.</p>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -585,7 +591,7 @@
         <p>Quando entrei na faculdade de Psicologia, entendi que poderia ajudar outras pessoas por meio da escuta atenta e de intervenções adequadas, construindo com elas uma relação mais consciente e saudável consigo mesmas.</p>
         <p class="about-highlight">Levo essa vivência para a minha prática clínica: crio um espaço seguro, onde você pode falar no seu tempo, compreender suas emoções e aprender novas formas de lidar com os desafios do dia a dia.</p>
       </div>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -601,23 +607,23 @@
       </div>
       <div class="approach-list">
         <div class="approach-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
           <div><h3>Objetivos claros</h3><p>Cada processo tem metas definidas junto com você, revisadas ao longo do caminho.</p></div>
         </div>
         <div class="approach-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           <div><h3>Ferramentas práticas</h3><p>Técnicas e exercícios que você leva para o dia a dia, entre uma sessão e outra.</p></div>
         </div>
         <div class="approach-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
           <div><h3>Foco no presente</h3><p>Trabalha o que está afetando sua vida agora, sem deixar de considerar sua história.</p></div>
         </div>
         <div class="approach-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"></path></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M12 2C7 2 3 6 3 11c0 5 9 11 9 11s9-6 9-11c0-5-4-9-9-9z"/></svg>
           <div><h3>Sessões online</h3><p>Atendimento por videochamada, com a mesma qualidade e sigilo de um consultório presencial.</p></div>
         </div>
       </div>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -654,7 +660,7 @@
           <p>A terapia não entrega respostas prontas. É um caminho para você construir as suas, com mais consciência e segurança. Se sentir que é hora de começar ou continuar esse processo, fica aqui o meu convite para conversarmos.</p>
         </li>
       </ol>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -714,8 +720,9 @@
         <li>Desenvolvimento pessoal</li>
         <li>Outros</li>
       </ul>
+      <button type="button" class="more-topics" id="moreTopics" aria-expanded="false">Mais opções</button>
       <p class="topics-foot">Não encontrou o seu motivo na lista? Tudo bem. Cada história é única, e você pode me contar o que te trouxe até aqui.</p>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -744,7 +751,7 @@
         <figure class="review-card" aria-hidden="true"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>Julia é uma profissional incrível! Escuta com atenção, dialoga e nos faz pensar e refletir a todo momento, fazendo provocações e orientações. Todos deveriam ter a oportunidade dessas trocas com ela!</blockquote><figcaption><strong>Vitória</strong></figcaption></figure>
         </div>
       </div>
-    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>Falar no WhatsApp</a></div>
+    <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
   </section>
 
@@ -767,10 +774,10 @@
       <div id="contato">
         <div class="panel-head">
           <svg class="door-icon" viewBox="0 0 60 72" fill="none">
-            <path d="M4 70V30C4 14 15 4 30 4s26 10 26 26v40" stroke-width="3"></path>
-            <line x1="30" y1="6" x2="30" y2="70" stroke-width="2"></line>
-            <circle cx="24" cy="40" r="1.6" fill="currentColor" stroke="none"></circle>
-            <circle cx="36" cy="40" r="1.6" fill="currentColor" stroke="none"></circle>
+            <path d="M4 70V30C4 14 15 4 30 4s26 10 26 26v40" stroke-width="3"/>
+            <line x1="30" y1="6" x2="30" y2="70" stroke-width="2"/>
+            <circle cx="24" cy="40" r="1.6" fill="currentColor" stroke="none"/>
+            <circle cx="36" cy="40" r="1.6" fill="currentColor" stroke="none"/>
           </svg>
           <span class="mono">Contato</span>
           <h2>Vamos conversar</h2>
@@ -782,7 +789,7 @@
         </div>
         <div class="contact-card">
           <a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"></path></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>
             Falar no WhatsApp
           </a>
           <p class="contact-note">Você será direcionado para o WhatsApp.</p>
@@ -839,6 +846,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var desktop = window.matchMedia('(min-width: 1101px)');
     desktop.addEventListener('change', function () { if (desktop.matches) setMenu(false); });
   }
+  var moreBtn = document.getElementById('moreTopics');
+  if (moreBtn) {
+    var list = document.querySelector('.pain-list');
+    moreBtn.addEventListener('click', function () {
+      var open = list.classList.toggle('expanded');
+      moreBtn.textContent = open ? 'Menos opções' : 'Mais opções';
+      moreBtn.setAttribute('aria-expanded', String(open));
+    });
+  }
   var video = document.querySelector('.video-hero video');
   if (video) {
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -862,6 +878,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-
-
-</body></html>
+</body>
+</html>
