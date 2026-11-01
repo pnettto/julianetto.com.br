@@ -720,7 +720,7 @@
         <li>Desenvolvimento pessoal</li>
         <li>Outros</li>
       </ul>
-      <button type="button" class="more-topics" id="moreTopics" aria-expanded="false">Mais opções</button>
+      <button type="button" class="more-topics" id="moreTopics" aria-expanded="false">Ver mais</button>
       <p class="topics-foot">Não encontrou o seu motivo na lista? Tudo bem. Cada história é única, e você pode me contar o que te trouxe até aqui.</p>
     <div class="wa-cta"><a href="https://wa.me/5511997927022?text=Ol%C3%A1%2C%20Julia%21%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20marcar%20uma%20conversa%20inicial." target="_blank" rel="noopener" class="btn-primary btn-whatsapp"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.7-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg>Falar no WhatsApp</a></div>
     </div>
@@ -851,7 +851,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var list = document.querySelector('.pain-list');
     moreBtn.addEventListener('click', function () {
       var open = list.classList.toggle('expanded');
-      moreBtn.textContent = open ? 'Menos opções' : 'Mais opções';
+      moreBtn.textContent = open ? 'Ver menos' : 'Ver mais';
       moreBtn.setAttribute('aria-expanded', String(open));
     });
   }
